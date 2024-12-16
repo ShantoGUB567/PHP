@@ -35,6 +35,31 @@
         echo($num1 % $num2);
         echo("<br>");
 
+        //Assignment Oparation
+        $num2 *= $num2 ;
+        echo("calculate 2 *= 2  =>");
+        echo($num2);
+        echo("<br>");
+
+        //conditional oparetor
+        echo("value of 6==7  =>");
+        echo var_dump(6==7);
+        echo("<br>");
+        echo("value of 6!=7  =>");
+        echo var_dump(6!=7);
+        echo("<br>");
+        echo("value of 6<=7  =>");
+        echo var_dump(6<=7);
+        echo("<br>");
+        echo("value of 6>=7  =>");
+        echo var_dump(6>=7);
+        echo("<br>");
+
+        //Increment ++ & Decrement --
+        //Logical oparetor (&& , || , xor , !)
+
+        
+
         echo("<br>");
         echo("Thank you for seeing..."); 
     ?>
