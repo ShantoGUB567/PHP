@@ -58,11 +58,46 @@
         //Increment ++ & Decrement --
         //Logical oparetor (&& , || , xor , !)
 
-        
+        $x = 5;
+        echo $x;
+        $txt = "W3Schools.com";
+        echo "I love " . $txt . "!";
+
 
         echo("<br>");
-        echo("Thank you for seeing..."); 
+        echo("Thank you for seeing...<br>"); 
     ?>
+
+    <?php
+    // if else
+        $time = 24; //date("H");
+
+        if($time>22 || $time<5){
+            echo "Good Night ! ! <br>";
+        }
+        elseif($time>5 || $time<10){
+            echo "Good Morning ! ! <br>";
+        }
+        elseif($time>10 || $time<14){
+            echo "Good Noon ! ! <br>";
+        }
+        else{
+            echo "Good Afternoon ! ! <br>";
+        }
+    ?>
+
+    <?php
+        //Function
+        function sum(int $x, int $y){
+            $z = $x + $y ;
+            return $z;
+        }
+
+        echo "Sum of 5 & 9 = ".sum(5,9)."<br>";
+        echo "Sum of 9 & 16 = ".sum(16,9)."<br>";
+
+    ?>
+
     </div>
 </body>
 </html>
