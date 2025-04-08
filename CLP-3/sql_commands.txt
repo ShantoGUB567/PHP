@@ -1,45 +1,16 @@
--- Basic SQL Commands with Examples
+CREATE DATABASE IF NOT EXISTS clp-3;
+USE clp-3;
 
--- 1. CREATE DATABASE
-CREATE DATABASE my_database;
-
--- 2. CREATE TABLE
-CREATE TABLE users (
+CREATE TABLE IF NOT EXISTS user (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(50) NOT NULL,
-    email VARCHAR(100) NOT NULL UNIQUE,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    name VARCHAR(100),
+    email VARCHAR(100),
+    phone VARCHAR(20)
 );
 
--- 3. INSERT DATA
-INSERT INTO users (username, email) 
-VALUES ('john_doe', 'john@example.com');
-
--- 4. SELECT DATA
-SELECT * FROM users;
-SELECT username, email FROM users WHERE id = 1;
-
--- 5. UPDATE DATA
-UPDATE users 
-SET email = 'new_email@example.com' 
-WHERE id = 1;
-
--- 6. DELETE DATA
-DELETE FROM users WHERE id = 1;
-
--- 7. JOIN TABLES
-SELECT u.username, o.order_date 
-FROM users u
-JOIN orders o ON u.id = o.user_id;
-
--- 8. CREATE INDEX
-CREATE INDEX idx_email ON users(email);
-
--- 9. DROP TABLE
-DROP TABLE users;
-
--- 10. TRANSACTION EXAMPLE
-BEGIN;
-INSERT INTO users (username, email) VALUES ('test', 'test@example.com');
-COMMIT;
--- or ROLLBACK if needed
+CREATE TABLE IF NOT EXISTS student (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id VARCHAR(20),
+    student_name VARCHAR(100),
+    department VARCHAR(100)
+);
